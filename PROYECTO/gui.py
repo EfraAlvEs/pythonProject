@@ -1,11 +1,8 @@
 import socket
 import pickle
-from estudiante import Estudiante
 import sys
-from PySide2.QtCore  import *
-from PySide2.QtGui  import *
-from PySide2.QtWidgets import *
 from interface import *
+from estudiante import Estudiante
 
 class Dialog(QMainWindow):
     def __init__(self):
@@ -66,7 +63,7 @@ class Dialog(QMainWindow):
 
     def bontonEnviarArchivoPresionado(self):
         print('Se ha presionado boton enviar archivo')
-        file = open('GUI.zip', 'rb')
+        file = open('PROYECTO.zip', 'rb')
         zip_serializado = pickle.dumps(file.read())
 
         self.s.send(b'INI')
