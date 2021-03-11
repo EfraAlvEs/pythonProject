@@ -149,6 +149,7 @@ class Dialog (QMainWindow):
             self.ui.comboBox.setCurrentIndex(0)
             self.resetText()
 
+        # [PV] Validar que el ID no exista
         elif (self.seleccion==3):
             self.estudiante = Post(EstudianteID=self.ui.ID_lineEdit.text(), Nombre=self.ui.nombre_lineEdit.text(),
                                    Apellido=self.ui.apellido_lineEdit.text(), Edad=self.ui.edad_lineEdit.text(),

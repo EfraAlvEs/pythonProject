@@ -17,13 +17,20 @@ def save(list):
     pickle.dump(list, file_to_store)
     file_to_store.close()
 
-def save(list):
-    file_to_store = open("database.db", "wb")
-    pickle.dump(list, file_to_store)
-    file_to_store.close()
+# def save(list):
+#     file_to_store = open("database.db", "wb")
+#     pickle.dump(list, file_to_store)
+#     file_to_store.close()
 
+# [PV] Usando un nombre como parametro se puede buscar uobjeto especifico
 def read():
     file_to_read = open("database.db", "rb")
     loaded_object = pickle.load(file_to_read)
     file_to_read.close()
-    print(loaded_object)
+    # print(loaded_object)
+
+    # [PV] Imprimir los objetos de la lista
+    print('\n')
+    for estudiante in loaded_object:
+        print(estudiante.nombre, estudiante.apellido, estudiante.edad, estudiante.carrera)
+
